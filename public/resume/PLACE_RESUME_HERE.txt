@@ -1,0 +1,11 @@
+Put your updated resume PDF in this folder and name it exactly:
+
+Brijesh_Patel_Resume.pdf
+
+Final path must be:
+public/resume/Brijesh_Patel_Resume.pdf
+
+The "Download Resume" button in the Resume section already links to /resume/Brijesh_Patel_Resume.pdf,
+so once you drop the file here (with this exact name), the button will work with no code changes.
+
+Delete this .txt file once the real PDF is in place.
