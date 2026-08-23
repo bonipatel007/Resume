@@ -1,0 +1,214 @@
+/* ==========================================================================
+   Design Tokens
+   ========================================================================== */
+:root {
+  /* Color: dark navy / charcoal base */
+  --bg: #080B14;
+  --bg-elevated: #0D1220;
+  --bg-surface: #10162A;
+  --bg-surface-hover: #141c33;
+  --border: rgba(148, 163, 200, 0.12);
+  --border-strong: rgba(148, 163, 200, 0.22);
+
+  /* Text */
+  --text-primary: #EEF1F8;
+  --text-secondary: #9AA3BD;
+  --text-muted: #6B738D;
+
+  /* Accents: blue / violet / cyan gradient system */
+  --accent-blue: #5B7FFF;
+  --accent-violet: #8B5CF6;
+  --accent-cyan: #22D3EE;
+  --gradient-primary: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-violet) 55%, var(--accent-cyan) 100%);
+  --gradient-soft: linear-gradient(135deg, rgba(91,127,255,0.15), rgba(139,92,246,0.15));
+  --glow-blue: 0 0 60px rgba(91, 127, 255, 0.25);
+  --glow-violet: 0 0 60px rgba(139, 92, 246, 0.22);
+
+  /* Type */
+  --font-display: 'Sora', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Layout */
+  --max-width: 1240px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --section-pad: clamp(64px, 10vw, 120px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+::selection {
+  background: rgba(91, 127, 255, 0.35);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #232a45;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2f3860;
+}
+
+/* ==========================================================================
+   Layout helpers
+   ========================================================================== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: var(--section-pad) 0;
+  position: relative;
+}
+
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+  font-weight: 500;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 8px var(--accent-cyan);
+}
+
+.glass-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(148, 163, 200, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 200, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+  pointer-events: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .container,
+  .section-inner {
+    padding: 0 18px;
+  }
+}
