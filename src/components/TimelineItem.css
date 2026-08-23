@@ -1,0 +1,114 @@
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 24px;
+  padding-bottom: 48px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item__marker {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-item__marker::before {
+  content: '';
+  position: absolute;
+  top: 22px;
+  bottom: -48px;
+  width: 1px;
+  background: var(--border);
+}
+
+.timeline-item:last-child .timeline-item__marker::before {
+  display: none;
+}
+
+.timeline-item__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 2px solid var(--border-strong);
+  margin-top: 6px;
+}
+
+.timeline-item--current .timeline-item__dot {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  box-shadow: 0 0 0 4px rgba(91, 127, 255, 0.15);
+}
+
+.timeline-item__content {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+
+.timeline-item--current .timeline-item__content {
+  border-color: rgba(91, 127, 255, 0.35);
+}
+
+.timeline-item__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.timeline-item__head h3 {
+  font-size: 18px;
+}
+
+.timeline-item__badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--gradient-soft);
+  color: var(--accent-cyan);
+  border: 1px solid var(--border-strong);
+}
+
+.timeline-item__meta {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.timeline-item__desc {
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.timeline-item__points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.timeline-item__points li {
+  font-size: 12.5px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  .timeline-item {
+    grid-template-columns: 20px 1fr;
+    gap: 14px;
+  }
+}
