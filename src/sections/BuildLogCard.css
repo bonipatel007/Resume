@@ -1,0 +1,123 @@
+.build-log {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.build-log__window {
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45), var(--glow-blue);
+}
+
+.build-log__titlebar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.build-log__dots {
+  display: flex;
+  gap: 7px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot--red { background: #ff5f57; }
+.dot--yellow { background: #febc2e; }
+.dot--green { background: #28c840; }
+
+.build-log__filename {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.build-log__body {
+  padding: 24px 22px 28px;
+  font-family: var(--font-mono);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.build-log__row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.build-log__row.is-pending {
+  opacity: 0.35;
+}
+
+.build-log__row.is-active {
+  color: var(--text-primary);
+}
+
+.build-log__row.is-active .build-log__stage {
+  color: var(--accent-cyan);
+}
+
+.build-log__status {
+  width: 16px;
+  color: var(--accent-blue);
+  font-weight: 700;
+}
+
+.build-log__row.is-active .build-log__status {
+  animation: blink 1s steps(2) infinite;
+}
+
+.build-log__stage {
+  flex: 1;
+}
+
+.build-log__ok {
+  font-size: 11.5px;
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+@keyframes blink {
+  50% { opacity: 0.2; }
+}
+
+.build-log__badge {
+  position: absolute;
+  z-index: 2;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  color: var(--text-primary);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 900px) {
+  .build-log__badge {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .build-log__row.is-active .build-log__status {
+    animation: none;
+  }
+}
