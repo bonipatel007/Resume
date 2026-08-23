@@ -1,0 +1,72 @@
+export const experience = [
+  {
+    id: 'sensussoft',
+    company: 'Sensussoft Private Limited',
+    role: 'Full Stack Developer',
+    location: 'Surat, Gujarat',
+    period: 'December 2025 — Present',
+    current: true,
+    description:
+      'Working as a Full Stack Developer, contributing across the software development lifecycle — from requirement understanding and UI implementation to application development, API integration, database handling and delivery.',
+    points: [
+      'Requirement analysis and technical planning',
+      'Figma-to-UI implementation',
+      'Frontend development',
+      'Backend and API integration',
+      'Database handling',
+      'Technical documentation',
+      'Client and project requirement discussions',
+      'End-to-end implementation',
+    ],
+  },
+  {
+    id: 'instacloud',
+    company: 'Instacloud Solutions',
+    role: 'Software Engineer',
+    location: 'Ahmedabad',
+    period: 'Until November 2025',
+    current: false,
+    description:
+      'Contributed to healthcare management applications, building React.js features backed by real-time data synchronization and secure authentication, alongside Microsoft Power Platform work.',
+    points: [
+      'Healthcare management applications',
+      'React.js development',
+      'Real-time data synchronization',
+      'Secure authentication',
+      'Telemedicine features',
+      'Appointment scheduling',
+      'Patient data management',
+      'Microsoft Power Platform (PowerApps, SharePoint)',
+      'Automated workflows',
+      'Dashboards and analytics',
+    ],
+  },
+  {
+    id: 'orail',
+    company: 'Orail Services / OptigoApps',
+    role: 'Project Coordinator',
+    location: 'Surat',
+    period: 'Earlier experience',
+    current: false,
+    description:
+      'Coordinated projects end-to-end, working closely with stakeholders to keep delivery on track.',
+    points: [
+      'Project coordination',
+      'Resource allocation',
+      'Stakeholder communication',
+      'Timeline management',
+      'Budget and deliverable monitoring',
+    ],
+  },
+  {
+    id: 'thats-end',
+    company: 'Thats End Private Limited',
+    role: 'PHP Developer Trainee',
+    location: 'Surat',
+    period: 'Earlier experience',
+    current: false,
+    description:
+      'Started my development career building full-stack web applications with PHP and MySQL.',
+    points: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'Full-stack web application development'],
+  },
+]
