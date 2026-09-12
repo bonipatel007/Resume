@@ -23,6 +23,18 @@ export default function Navbar() {
     }
   }, [open])
 
+  const handleNavClick = (href) => {
+    setOpen(false)
+    setTimeout(() => {
+      const target = document.querySelector(href)
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' })
+      } else {
+        window.location.hash = href
+      }
+    }, 300)
+  }
+
   return (
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar__inner container">
@@ -66,12 +78,27 @@ export default function Navbar() {
           >
             <nav aria-label="Mobile">
               {nav.map((item) => (
-                <a key={item.href} href={item.href} onClick={() => setOpen(false)}>
+                <a 
+                  key={item.href} 
+                  href={item.href} 
+                  onClick={(e) => {
+                    e.preventDefault()
+                    handleNavClick(item.href)
+                  }}
+                >
                   {item.label}
                 </a>
               ))}
             </nav>
-            <Button href="#contact" variant="primary" icon={false} onClick={() => setOpen(false)}>
+            <Button 
+              href="#contact" 
+              variant="primary" 
+              icon={false} 
+              onClick={(e) => {
+                e.preventDefault()
+                handleNavClick('#contact')
+              }}
+            >
               Let's Talk
             </Button>
           </motion.div>
