@@ -1,4 +1,4 @@
-export const experiences = [
+export const experience = [
   {
     id: 1,
     company: 'Tech Innovation Labs',
