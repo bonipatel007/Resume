@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { nav } from '../data/site.js'
 import Button from './Button.jsx'
+import profileImage from '../assets/Brijeshpatel.jpg'
 import './Navbar.css'
 
 export default function Navbar() {
@@ -39,7 +40,13 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar__inner container">
         <a href="#home" className="navbar__logo" onClick={() => setOpen(false)}>
-          <span className="navbar__logo-mark">BP</span>
+          <div className="navbar__logo-mark">
+            <img 
+              src={profileImage} 
+              alt="Brijesh Patel" 
+              className="navbar__logo-image"
+            />
+          </div>
           <span className="navbar__logo-text">Brijesh Patel</span>
         </a>
 
