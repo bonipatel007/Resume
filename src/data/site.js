@@ -16,11 +16,19 @@ export const profile = {
   phone: '+91 9687130799',
   location: 'Surat, Gujarat, India',
   resumeUrl: '/resume/Brijesh_Patel_Resume.pdf',
+  bio: 'I transform ideas into scalable digital products. With 3+ years of full-stack development experience, I build complete solutions from UI design to backend architecture.',
 }
 
 export const stats = [
-  { value: '3+', label: 'Years of Experience' },
-  { value: 'Full Stack', label: 'Development' },
-  { value: 'End-to-End', label: 'Project Delivery' },
-  { value: 'Modern', label: 'Web Technologies' },
+  { value: '50+', label: 'Projects Completed' },
+  { value: '30+', label: 'Happy Clients' },
+  { value: '3+', label: 'Years Experience' },
+  { value: '100%', label: 'Satisfaction Rate' },
+]
+
+export const socialLinks = [
+  { label: 'GitHub', url: 'https://github.com', icon: 'github' },
+  { label: 'LinkedIn', url: 'https://linkedin.com', icon: 'linkedin' },
+  { label: 'Twitter', url: 'https://twitter.com', icon: 'twitter' },
+  { label: 'Email', url: 'mailto:brijeshpatel5573@gmail.com', icon: 'mail' },
 ]
