@@ -1,44 +1,32 @@
 export const services = [
   {
-    id: 1,
     title: 'Full Stack Development',
-    description: 'End-to-end web applications built with modern technologies.',
-    icon: 'Code',
-    features: ['React & Vue.js', 'Node.js & Express', 'REST APIs', 'Authentication']
+    description: 'End-to-end web application development from UI design to backend infrastructure. I build complete, production-ready solutions.',
+    icon: 'Code2'
   },
   {
-    id: 2,
-    title: 'UI/UX Design',
-    description: 'Beautiful, intuitive interfaces designed with user experience at the core.',
-    icon: 'Palette',
-    features: ['Figma Design', 'Responsive UI', 'User Research', 'Prototyping']
+    title: 'API Development',
+    description: 'Designing and building robust REST and GraphQL APIs with proper authentication, validation, and error handling.',
+    icon: 'Server'
   },
   {
-    id: 3,
     title: 'Database Design',
-    description: 'Efficient database architecture and optimization.',
-    icon: 'Database',
-    features: ['MongoDB', 'PostgreSQL', 'Query Optimization', 'Data Security']
+    description: 'Schema design, optimization, and management for MongoDB, PostgreSQL, MySQL and other databases at scale.',
+    icon: 'Database'
   },
   {
-    id: 4,
-    title: 'Mobile Development',
-    description: 'Cross-platform mobile applications that work seamlessly.',
-    icon: 'Smartphone',
-    features: ['React Native', 'Flutter', 'Cross-Platform', 'App Store Ready']
+    title: 'Frontend Development',
+    description: 'React.js, Vue.js, and vanilla JavaScript. Building responsive, accessible, and performant user interfaces.',
+    icon: 'Layout'
   },
   {
-    id: 5,
+    title: 'DevOps & Deployment',
+    description: 'CI/CD pipelines, Docker containerization, AWS deployment, and infrastructure automation.',
+    icon: 'Cloud'
+  },
+  {
     title: 'Performance Optimization',
-    description: 'Lightning-fast applications with optimized performance.',
-    icon: 'Zap',
-    features: ['Code Splitting', 'Caching', 'CDN', 'SEO Optimization']
-  },
-  {
-    id: 6,
-    title: 'Deployment & DevOps',
-    description: 'Reliable deployments and continuous integration.',
-    icon: 'Rocket',
-    features: ['Docker', 'CI/CD', 'Cloud Deploy', 'Monitoring']
+    description: 'Code splitting, lazy loading, caching strategies, and database optimization for lightning-fast applications.',
+    icon: 'Zap'
   }
 ]
