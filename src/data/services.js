@@ -1,42 +1,44 @@
 export const services = [
   {
-    icon: 'Layers',
-    title: 'Full Stack Web Development',
-    description: 'Building responsive and scalable web applications from the ground up, covering both the interface and the systems behind it.',
+    id: 1,
+    title: 'Full Stack Development',
+    description: 'End-to-end web applications built with modern technologies.',
+    icon: 'Code',
+    features: ['React & Vue.js', 'Node.js & Express', 'REST APIs', 'Authentication']
   },
   {
-    icon: 'MonitorSmartphone',
-    title: 'Frontend Development',
-    description: 'Modern React.js interfaces built with responsive, reusable components and attention to detail.',
+    id: 2,
+    title: 'UI/UX Design',
+    description: 'Beautiful, intuitive interfaces designed with user experience at the core.',
+    icon: 'Palette',
+    features: ['Figma Design', 'Responsive UI', 'User Research', 'Prototyping']
   },
   {
-    icon: 'Plug',
-    title: 'Backend & API Integration',
-    description: 'REST API integration and backend-driven application development that connects the interface to real data.',
-  },
-  {
+    id: 3,
+    title: 'Database Design',
+    description: 'Efficient database architecture and optimization.',
     icon: 'Database',
-    title: 'Database Development',
-    description: 'Working with SQL-based databases and structuring application data to match real business logic.',
+    features: ['MongoDB', 'PostgreSQL', 'Query Optimization', 'Data Security']
   },
   {
-    icon: 'Figma',
-    title: 'UI Implementation',
-    description: 'Converting Figma designs into pixel-conscious, responsive interfaces that stay true to the original design.',
+    id: 4,
+    title: 'Mobile Development',
+    description: 'Cross-platform mobile applications that work seamlessly.',
+    icon: 'Smartphone',
+    features: ['React Native', 'Flutter', 'Cross-Platform', 'App Store Ready']
   },
   {
-    icon: 'Route',
-    title: 'Requirement to Product',
-    description: 'Understanding requirements, planning the solution and delivering the complete application end-to-end.',
+    id: 5,
+    title: 'Performance Optimization',
+    description: 'Lightning-fast applications with optimized performance.',
+    icon: 'Zap',
+    features: ['Code Splitting', 'Caching', 'CDN', 'SEO Optimization']
   },
   {
-    icon: 'Wrench',
-    title: 'Existing Application Enhancement',
-    description: 'Improving, maintaining, refactoring and adding new features to applications that are already in production.',
-  },
-  {
-    icon: 'Briefcase',
-    title: 'Business Software Solutions',
-    description: 'Building applications around real business workflows and operational requirements, not just generic templates.',
-  },
+    id: 6,
+    title: 'Deployment & DevOps',
+    description: 'Reliable deployments and continuous integration.',
+    icon: 'Rocket',
+    features: ['Docker', 'CI/CD', 'Cloud Deploy', 'Monitoring']
+  }
 ]

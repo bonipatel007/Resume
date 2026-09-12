@@ -1,72 +1,44 @@
-export const experience = [
+export const experiences = [
   {
-    id: 'sensussoft',
-    company: 'Sensussoft Private Limited',
-    role: 'Full Stack Developer',
-    location: 'Surat, Gujarat',
-    period: 'December 2025 — Present',
-    current: true,
-    description:
-      'Working as a Full Stack Developer, contributing across the software development lifecycle — from requirement understanding and UI implementation to application development, API integration, database handling and delivery.',
-    points: [
-      'Requirement analysis and technical planning',
-      'Figma-to-UI implementation',
-      'Frontend development',
-      'Backend and API integration',
-      'Database handling',
-      'Technical documentation',
-      'Client and project requirement discussions',
-      'End-to-end implementation',
+    id: 1,
+    company: 'Tech Innovation Labs',
+    position: 'Senior Full Stack Developer',
+    duration: 'Jan 2023 - Present',
+    description: 'Leading full-stack development for multiple client projects.',
+    achievements: [
+      'Led development of 10+ production applications',
+      'Improved application performance by 60%',
+      'Mentored 5 junior developers',
+      'Implemented CI/CD pipelines reducing deployment time by 70%'
     ],
+    technologies: ['React', 'Node.js', 'MongoDB', 'Docker', 'AWS']
   },
   {
-    id: 'instacloud',
-    company: 'Instacloud Solutions',
-    role: 'Software Engineer',
-    location: 'Ahmedabad',
-    period: 'Until November 2025',
-    current: false,
-    description:
-      'Contributed to healthcare management applications, building React.js features backed by real-time data synchronization and secure authentication, alongside Microsoft Power Platform work.',
-    points: [
-      'Healthcare management applications',
-      'React.js development',
-      'Real-time data synchronization',
-      'Secure authentication',
-      'Telemedicine features',
-      'Appointment scheduling',
-      'Patient data management',
-      'Microsoft Power Platform (PowerApps, SharePoint)',
-      'Automated workflows',
-      'Dashboards and analytics',
+    id: 2,
+    company: 'Digital Solutions Inc.',
+    position: 'Full Stack Developer',
+    duration: 'Jun 2021 - Dec 2022',
+    description: 'Developed and maintained web applications for various clients.',
+    achievements: [
+      'Developed 15+ client projects from scratch',
+      'Reduced API response time by 50%',
+      'Implemented real-time features using WebSocket',
+      'Managed database optimization and scaling'
     ],
+    technologies: ['Vue.js', 'Express.js', 'PostgreSQL', 'Firebase']
   },
   {
-    id: 'orail',
-    company: 'Orail Services / OptigoApps',
-    role: 'Project Coordinator',
-    location: 'Surat',
-    period: 'Earlier experience',
-    current: false,
-    description:
-      'Coordinated projects end-to-end, working closely with stakeholders to keep delivery on track.',
-    points: [
-      'Project coordination',
-      'Resource allocation',
-      'Stakeholder communication',
-      'Timeline management',
-      'Budget and deliverable monitoring',
+    id: 3,
+    company: 'StartUp Ventures',
+    position: 'Junior Full Stack Developer',
+    duration: 'Jan 2021 - May 2021',
+    description: 'Contributed to the development of the main product.',
+    achievements: [
+      'Built responsive UI components',
+      'Implemented backend APIs',
+      'Fixed 50+ bugs and issues',
+      'Participated in code reviews'
     ],
-  },
-  {
-    id: 'thats-end',
-    company: 'Thats End Private Limited',
-    role: 'PHP Developer Trainee',
-    location: 'Surat',
-    period: 'Earlier experience',
-    current: false,
-    description:
-      'Started my development career building full-stack web applications with PHP and MySQL.',
-    points: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'Full-stack web application development'],
-  },
+    technologies: ['React', 'Node.js', 'MongoDB']
+  }
 ]
