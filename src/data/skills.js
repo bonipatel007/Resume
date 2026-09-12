@@ -1,4 +1,4 @@
-export const skillCategories = [
+export const skillGroups = [
   {
     category: 'Frontend',
     skills: [
